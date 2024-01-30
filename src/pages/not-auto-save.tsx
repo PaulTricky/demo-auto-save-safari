@@ -1,4 +1,5 @@
 import CreatePasswordForm from "@/domains/Onboarding/components/CreatePasswordForm"
+import { Col, Row } from "antd/lib";
 import { useRouter } from "next/router"
 
 export default () => {
@@ -6,6 +7,14 @@ export default () => {
   const router = useRouter();
 
   return (
+    <Row className="w-full">
+    <Col span={12}>
     <CreatePasswordForm onNextStep={() => router.push('/home')} />
+    </Col>
+    <Col  span={12}>
+      <h3>Code: </h3>
+    <img src="/assets/not-auto-save.png" height={500} width={'auto'} />
+    </Col>
+  </Row>
   )
 }
