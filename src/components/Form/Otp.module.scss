@@ -1,0 +1,94 @@
+@import '/src/styles/responsive.scss';
+.otpWrapper {
+  max-width: 466px;
+  width: 100%;
+}
+
+.form {
+  text-align: left;
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.card {
+  padding: 3rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.otp {
+  background: #ffffff;
+  border: 0.55px solid var(--border-color);
+  font-size: 24px;
+  color: var(--app-black-1);
+  text-align: center;
+  line-height: 56px;
+  height: 48px;
+  width: 48px !important;
+  @include mobile {
+    line-height: 44px;
+    height: 44px;
+    width: 44px !important;
+  }
+  border-radius: 16px;
+  outline: none;
+  &:focus,
+  &:active,
+  &:hover {
+    border: 2px solid var(--main-primary-color);
+  }
+}
+
+.otpContainer {
+  gap: 2em;
+  @include mobile {
+    justify-content: center;
+  }
+}
+
+.otpError {
+  border-color: var(--error-primary-color);
+}
+
+.expires {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.title {
+  font-weight: 600 !important;
+  font-size: 32px !important;
+  line-height: 40px !important;
+  margin: 0 !important;
+}
+
+.text {
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+}
+
+.codeLabel {
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 28px !important;
+}
+
+.otpForm {
+  margin: 0 !important;
+  display: flex;
+  justify-content: space-evenly;
+
+  @include mobile {
+    :global {
+      .ant-row {
+        justify-content: center;
+      }
+    }
+  }
+}

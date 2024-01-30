@@ -1,0 +1,187 @@
+@mixin button-color-mixin($color: var(--main-primary-color), $bgColor: var(--transparent-primary-color-16)) {
+  color: $color;
+  border-color: $bgColor;
+  background: $bgColor;
+
+  &.showBorder {
+    border-color: $color;
+  }
+
+  &:global(.ant-btn-primary) {
+    color: #fff;
+
+    border-color: $color;
+    background: $color;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+  }
+
+  &:global(.ant-btn-text) {
+    color: $color;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background: rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &:global(.ant-btn-link) {
+    color: $color;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    color: var(--text-disable-color);
+    background-color: var(--action-states-disabled-background);
+    border: unset;
+  }
+}
+
+.btn {
+  box-shadow: none;
+  &:global(.ant-btn-default) {
+    @include button-color-mixin(var(--white-color), var(--main-primary-color));
+  }
+
+  &:global(.ant-btn-dangerous) {
+    @include button-color-mixin(var(--error-primary-color), var(--transparent-error-color-16));
+  }
+}
+
+.btnBlack {
+  @include button-color-mixin(var(--white-color), var(--black-color));
+}
+
+.btnWhite {
+  @include button-color-mixin(#344053, var(--white-color));
+}
+
+.showBorder {
+  border-radius: 100px;
+  border: 1.5px solid var(--border-color);
+}
+
+.viewContractBtn {
+  border: 1.5px solid #d0d5dd;
+  // color: #1c1b1f;
+  font-weight: 500;
+  font-size: 0.875rem;
+  box-shadow: none;
+}
+.viewContractBtnTextType {
+  border: none;
+  color: #1c1b1f;
+  font-weight: 500;
+  height: auto;
+  padding: 0;
+  padding-inline-start: 0 !important;
+  padding-inline-end: 0 !important;
+  background-color: inherit;
+
+  &:hover {
+    background-color: inherit !important;
+    border-radius: 0 !important;
+    color: inherit !important;
+    border-color: inherit !important;
+  }
+}
+
+.progressBtn {
+  width: 148px;
+}
+
+.markCompleteBtn {
+}
+
+.rejectBtn {
+  width: 100%;
+  height: 44px;
+  border-radius: 160px;
+  font-weight: 500;
+  border: 2px solid #e3e3e3;
+}
+
+.acpOfferBtn {
+  width: 100%;
+  height: 44px;
+  border-radius: 160px;
+  font-weight: 500;
+  background: var(--main-primary-color);
+  color: var(--white-color);
+  span {
+    color: var(--white-color);
+  }
+}
+
+.cursor {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  .btnNewTab {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: right;
+    color: #af0000;
+  }
+}
+
+.appliedBtn {
+  height: 44px;
+  border-radius: 160px;
+  font-weight: 500;
+  background: var(--purple-900-color);
+  color: var(--white-color);
+}
+
+.applyToProjectBtn {
+  width: 100%;
+  height: 44px;
+  background: var(--main-primary-color);
+  border-radius: 160px;
+  font-weight: 500;
+  color: var(--white-color);
+  box-shadow: none !important;
+}
+
+.saveBtn {
+  :global {
+    .ant-dropdown-menu {
+      width: 240px;
+      height: 240px;
+      overflow: auto;
+    }
+    .ant-dropdown-menu-item:first-child {
+      border-bottom: 1px solid #F3F4F6;
+    }
+    .ant-dropdown-menu-item:first-child:hover {
+      background-color: transparent;
+    }
+    .ant-dropdown-menu-title-content {
+      text-align: left;
+    }
+  }
+}
+
+.savedBtn {
+  :global {
+    .ant-dropdown-menu {
+      width: max-content;
+    }
+  }
+}
+
+.addSaveList {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}

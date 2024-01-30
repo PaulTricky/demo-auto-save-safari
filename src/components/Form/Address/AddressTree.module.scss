@@ -1,0 +1,58 @@
+$btn-width: 56px;
+$clear-width: 20px;
+$clear-right-padding: 14px;
+
+.treeSelect {
+  width: 100%;
+  :global {
+    .ant-select-selector {
+      padding: 8px 12px;
+      padding-inline-end: $btn-width + $clear-right-padding + $clear-width !important;
+
+      &::after {
+        line-height: 18.2px;
+      }
+    }
+
+    .ant-select-arrow {
+      width: $btn-width;
+      height: 100%;
+      top: 0;
+      right: 0;
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--divider-color);
+      border-left: 1px solid var(--divider-color);
+    }
+
+    .ant-select-clear {
+      font-size: $clear-width;
+      width: $clear-width;
+      height: $clear-width;
+      margin-top: -$clear-width / 2;
+      right: calc($btn-width + $clear-right-padding);
+      svg {
+        margin: 0px;
+      }
+    }
+
+    .ant-select-selection-overflow {
+      gap: 8px;
+    }
+
+    .ant-select-selection-item {
+      margin: 0px;
+      height: 22px;
+      line-height: 22px;
+      align-items: center;
+      background-color: var(--action-states-selected);
+    }
+
+    .ant-select-selection-search-input {
+      height: 22px;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,951 @@
+.onboardingContent {
+  margin-top: 3rem;
+}
+
+.onboardingLayout {
+  margin-top: 2.5rem;
+  justify-content: space-around;
+}
+
+.datePickerWrapper {
+  .topLabel {
+    position: absolute;
+    top: 0;
+    transform: translate(10%, -50%);
+    padding: 0 6px;
+    background-color: var(--white-color);
+    z-index: 2;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #1c1b1f;
+  }
+  :global {
+    .ant-picker-disabled {
+      background-color: transparent;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  margin: 76px auto;
+  gap: 40px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+
+  :global {
+    .react-tel-input {
+      .form-control {
+        border-radius: 12px;
+        margin-left: 50px;
+        padding-left: 10px;
+        width: calc(100% - 50px);
+      }
+      .flag-dropdown {
+        border-top-left-radius: 12px !important;
+        border-bottom-left-radius: 12px !important;
+        background: var(--white-color);
+        border-radius: 12px;
+        // overflow: auto;
+        .selected-flag {
+          border-radius: 12px;
+        }
+      }
+      input {
+        // padding-left: 15px !important;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+      }
+    }
+    .ant-form-item-label {
+      label {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--grey-700, #5a5c60);
+      }
+    }
+  }
+}
+
+.drawer {
+  .goBackBtn {
+    top: 48px;
+    left: 15px;
+  }
+
+  .goBackCompany {
+    top: 32px;
+    left: 15px;
+    z-index: 2;
+  }
+
+  .companyDrawerContainer {
+    margin: 32px auto;
+    gap: 32px;
+  }
+
+  .freelancerDrawerContainer {
+    margin: 48px auto;
+    gap: 24px;
+  }
+
+  .CardUploadImage {
+    border-radius: 24px;
+    background: #f5f5f5;
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  .checkbox {
+    text-align: left;
+  }
+
+  .skills {
+    margin-bottom: 0.5rem;
+    margin-top: 4rem;
+  }
+
+  .setUpskills {
+    margin-bottom: 0.5rem;
+    margin-top: 4rem;
+  }
+
+  :global {
+    .react-tel-input {
+      .form-control {
+        border-radius: 12px;
+        margin-left: 50px;
+        padding-left: 10px;
+        width: calc(100% - 50px);
+      }
+      .flag-dropdown {
+        border-top-left-radius: 12px !important;
+        border-bottom-left-radius: 12px !important;
+        background: var(--white-color);
+        border-radius: 12px;
+        // overflow: auto;
+        .selected-flag {
+          border-radius: 12px;
+        }
+      }
+      input {
+        // padding-left: 15px !important;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+      }
+    }
+    .ant-drawer-content-wrapper {
+      max-width: 1920px;
+    }
+    .ant-drawer-close {
+      display: none !important;
+    }
+  }
+  .titleDrawerSteps {
+    width: 100%;
+    justify-content: center;
+    & :global {
+      .ant-steps-item-title {
+        font-size: 14px !important;
+      }
+      .ant-steps.ant-steps-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+.drawerMobile {
+  :global {
+    .ant-drawer-header {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.accountRole {
+  margin-top: 40px;
+  width: 711px;
+
+  .roleCard {
+    cursor: pointer;
+    width: 100%;
+    height: 294px;
+    border-radius: 48px;
+    background: linear-gradient(0deg, #f7f5f4 0%, #f7f5f4 100%), #f6f1f2;
+    .roleIcon {
+      width: 90px;
+      height: 90px;
+    }
+    .cardTitle {
+      margin-top: 34px;
+    }
+    .cardSubTitle {
+      margin-top: 14px;
+    }
+  }
+
+  .policy {
+    margin-top: 50px;
+  }
+}
+
+.accountRoleMobile {
+  margin-top: 0;
+  .roleCard {
+    height: auto;
+    padding: 1rem 0;
+  }
+}
+
+.infoCard {
+  border-radius: 24px;
+  border: 1px solid #e0e0e0;
+  gap: 16px;
+  padding: 64px;
+  width: 684px;
+}
+
+.createPasswordCard {
+  border-radius: 24px;
+  border: 1px solid #e0e0e0;
+  padding: 64px;
+  width: 528px;
+  margin-top: 1rem;
+
+  .createPasswordForm {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    :global {
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+    }
+
+    .formValidate {
+      display: flex;
+      gap: 8px;
+      row-gap: 7px;
+      .checkbox {
+        pointer-events: none;
+      }
+
+      .defaultCheckbox {
+        :global {
+          .ant-checkbox-inner {
+            background-color: var(--grey-100, #e6e6e6);
+            border-color: var(--grey-100, #e6e6e6);
+          }
+        }
+      }
+
+      .activeCheckbox {
+        :global {
+          .ant-checkbox-inner {
+            background-color: #000;
+            border-color: #000;
+          }
+        }
+      }
+
+      .formLabelValidate {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--grey-600, #727279);
+      }
+    }
+  }
+}
+
+.verify {
+  align-items: center;
+  width: 654px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  svg {
+    margin: 0 !important;
+  }
+
+  .freelancerBanner {
+    text-align: center;
+    width: 100%;
+    background: #f4eaea;
+    .description {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--black, #191919);
+      line-height: 28px;
+    }
+    svg {
+      width: 130px;
+      height: 48px;
+    }
+  }
+  .freelancerBannerMobile {
+    .description {
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    svg {
+      width: 130px;
+      height: 38px;
+    }
+  }
+
+  .clientBanner {
+    padding: 24px;
+    border-radius: 24px;
+    background: #f4eaea;
+    display: flex;
+    gap: 16px;
+    .descriptions {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    .bannerIcon {
+      width: 148px;
+      height: 148px;
+    }
+  }
+
+  .verifyList {
+    padding: 48px 64px;
+    border-radius: 24px;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .stepsTitle {
+      font-weight: 600;
+      font-size: 24px;
+      color: #0e0f0c;
+    }
+    .steps {
+      width: 100%;
+      padding: 16px 12px 16px 16px;
+
+      :global {
+        .ant-btn {
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          // &:hover {
+          //   background-color: red;
+          //   color: var(--main-primary-color);
+          // }
+          // &:focus {
+          //   outline: none;
+          // }
+          span {
+            display: none !important;
+          }
+        }
+        .ant-steps-item-tail {
+          display: none !important;
+        }
+        .ant-typography {
+          margin-bottom: 0;
+        }
+
+        .ant-steps-item-title {
+          width: 100%;
+        }
+
+        .ant-steps-item-icon {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+.verifyListMobile {
+  width: 100vw !important;
+  padding: 1rem !important;
+  border: none !important;
+  text-align: center;
+}
+
+.freelancerVerify {
+  margin: 44px auto;
+}
+
+.verifyLink {
+  color: #af0000;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: none;
+}
+
+.textDesktopWidth {
+  max-width: 60%;
+}
+
+.goBackBtn {
+  position: relative;
+  top: 76px;
+  left: 135px;
+  font-weight: 600;
+  color: #300;
+}
+
+.goBackCompany {
+  top: 76px;
+  left: 15px;
+}
+
+.goBackMobile {
+  top: 15px !important;
+  left: 15px !important;
+}
+
+.containerMobileWidth {
+  width: auto;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.mobileWidth {
+  width: 95% !important;
+  padding: 1rem !important;
+}
+
+.verifyCard {
+  border-radius: 16px;
+  border: 1px solid #e0d5d5;
+  width: 721px;
+  padding: 32px;
+  position: relative;
+}
+
+.backgroundMobile {
+  width: 100% !important;
+  padding: 0 8px !important;
+  border: none;
+}
+
+.backgroundCheckHeader {
+  display: flex;
+  padding: 8px 16px;
+  margin: 1rem 0;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  gap: 1rem;
+}
+.backgroundCheckHeaderMobile {
+  flex-direction: column !important;
+}
+
+.companyBannerMobile {
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  .description {
+    text-align: center !important;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .bannerIcon {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+.freelancerVerifyCard {
+  margin: 24px 0;
+}
+
+.companyVerifyCard {
+  margin: 32px 0;
+  :global {
+    .ant-form-item-label {
+      label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #000;
+        width: 100%;
+      }
+    }
+    .ant-radio-wrapper {
+      color: #1e0000;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+.datePickerMobile {
+  :global {
+    .ant-picker-panel-container {
+      box-shadow: none;
+    }
+    .ant-modal-body {
+    }
+    .ant-picker-week-panel {
+      width: 100% !important;
+      .ant-picker-content {
+        width: 100% !important;
+        th {
+          width: 33% !important;
+        }
+        tr {
+          display: flex;
+          td {
+            width: 33%;
+          }
+        }
+      }
+    }
+    .ant-picker-month-panel {
+      width: 100% !important;
+      .ant-picker-content {
+        width: 100% !important;
+        th {
+          width: 33% !important;
+        }
+        tr {
+          display: flex;
+          td {
+            width: 33%;
+          }
+        }
+      }
+    }
+    .ant-picker-date-panel {
+      width: 100% !important;
+      .ant-picker-content {
+        width: 100% !important;
+        th {
+          width: 33% !important;
+        }
+        tr {
+          display: flex;
+          td {
+            width: 33%;
+          }
+        }
+      }
+    }
+    .ant-picker-year-panel {
+      width: 100% !important;
+      .ant-picker-content {
+        width: 100% !important;
+        th {
+          width: 33% !important;
+        }
+        tr {
+          display: flex;
+          td {
+            width: 33%;
+          }
+        }
+      }
+    }
+    .ant-picker-decade-panel {
+      width: 100% !important;
+      .ant-picker-content {
+        width: 100% !important;
+        th {
+          width: 33% !important;
+        }
+        tr {
+          display: flex;
+          td {
+            width: 33%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cardContactVerify {
+  background: #f8f7f8;
+}
+
+.space {
+  :global {
+    .ant-space-item {
+      width: 80%;
+    }
+  }
+}
+
+.card {
+  background: linear-gradient(0deg, #f7f5f4, #f7f5f4), #f6f1f2;
+  border-radius: 48px;
+  width: 100%;
+  margin: 2rem auto 0 auto;
+  max-width: 330px;
+  :global {
+    .ant-card-meta-description {
+      max-width: 300px;
+    }
+  }
+
+  svg {
+    margin: 2em 0;
+  }
+}
+
+.cardDesc {
+  margin-bottom: 2rem;
+  :global {
+    .ant-space-item {
+      text-align: justify;
+    }
+  }
+}
+
+.cardOnboarding {
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 1rem;
+  padding: 1em 1em;
+  width: 45vw;
+  max-width: 680px;
+
+  :global {
+    .react-tel-input {
+      .form-control {
+        border-radius: 12px;
+        margin-left: 50px;
+        padding-left: 10px;
+        width: calc(100% - 50px);
+      }
+      .flag-dropdown {
+        border-top-left-radius: 12px !important;
+        border-bottom-left-radius: 12px !important;
+        background: var(--white-color);
+        border-radius: 12px;
+        // overflow: auto;
+        .selected-flag {
+          border-radius: 12px;
+        }
+      }
+      input {
+        // padding-left: 15px !important;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+      }
+    }
+    .ant-form-item-required {
+      white-space: nowrap;
+      margin-right: 5px !important;
+    }
+  }
+
+  &.createPwd {
+    max-width: 530px;
+    padding: 0 3rem;
+  }
+
+  :global {
+    .ant-card-body {
+      padding: 2rem 1rem !important;
+    }
+  }
+  .year_of_experience {
+    margin-bottom: 0;
+    :global {
+      .ant-form-item-explain-error {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
+  .cardContactVerify {
+    background: #f8f7f8;
+  }
+}
+.workPreferenceMobile {
+  width: 90vw !important;
+}
+
+.formValidate {
+  display: flex !important;
+  gap: 5px !important;
+  & :global {
+    .ant-checkbox-inner {
+      border-radius: 30px;
+    }
+  }
+}
+
+.formLabelValidate {
+  font-size: 12px !important;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.tags {
+  padding: 6px 11px;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  align-items: center;
+  // display: flex;
+  // flex-wrap: wrap;
+  display: block;
+  max-width: 100%;
+  :global {
+    .ant-input-prefix {
+      display: block !important;
+      // flex: inherit;
+      .ant-tag {
+        align-items: baseline;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .ant-input {
+      height: 20px;
+      text-indent: 8px;
+      border-radius: 100px !important;
+      top: -5px;
+      // border: red solid 1px !important;
+    }
+  }
+
+  span {
+    margin-bottom: 10px;
+  }
+}
+.tags::before {
+  content: none;
+}
+
+.date {
+  :global {
+    .ant-form-item-explain-error {
+      white-space: nowrap;
+      position: absolute;
+    }
+  }
+}
+
+.selectInput {
+  & :global {
+    .ant-select-selection-item {
+      border-radius: 100px;
+      align-items: center;
+    }
+    .ant-select-selector {
+      border-radius: 12px;
+    }
+  }
+}
+
+.card_step_5 {
+  // width: 100vw;
+  max-width: 720px;
+  text-align: left;
+  margin: auto;
+}
+.card_step_4 {
+  // width: 100vw;
+  max-width: 720px;
+  text-align: left;
+  margin: auto;
+  .setUpskills {
+    margin-bottom: 0.5rem;
+    margin-top: 4rem;
+  }
+}
+.card_step_3 {
+  // width: 100vw;
+  max-width: 720px;
+  margin: auto;
+  .skills {
+    margin-bottom: 0.5rem;
+    margin-top: 4rem;
+  }
+}
+.card_step_2 {
+  margin: auto;
+
+  .checkbox {
+    text-align: left;
+  }
+}
+.card_step_1 {
+  width: 100vw;
+  margin: auto;
+  max-width: 640px;
+  .CardUploadImage {
+    background-color: #f5f5f5;
+    // text-align: center;
+    & :global {
+      .ant-upload {
+        width: 0 !important;
+        height: 0 !important;
+      }
+    }
+    .buttonWithImage {
+      justify-content: center;
+    }
+  }
+
+  :global {
+    .ant-typography {
+      text-align: left;
+    }
+  }
+}
+
+.uploadAvatar {
+  :global {
+    .ant-upload-list {
+      display: flex;
+      justify-content: center;
+    }
+    .ant-upload-list-item-image {
+      object-fit: none !important;
+    }
+
+    .ant-upload {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+}
+
+.divider {
+  border-top: 2px solid var(--divider-color);
+  position: absolute;
+  left: 0;
+  margin-top: 1.5rem;
+}
+.selectInput {
+  text-align: left;
+
+  :global {
+    .ant-select-selector {
+      border-radius: 12px;
+    }
+  }
+}
+.deleteIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border-width: 2px;
+  border-radius: 160px;
+  padding: 0.7rem !important;
+  line-height: normal;
+  width: auto;
+  height: auto;
+  // min-width: 150px;
+}
+
+.radioBtn {
+  & :global {
+    .ant-radio-checked .ant-radio-inner {
+      border: 2px solid var(--main-primary-color) !important;
+      // &:after {
+      //   background-color: var(--main-primary-color);
+      // }
+    }
+  }
+}
+
+.iconCloseCircleOutlined {
+  svg {
+    // margin-left: 0;
+    // position: relative;
+    // left: -3px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.buttonWithBorder {
+  border-radius: 100px;
+  &:focus-visible {
+    outline: none !important;
+  }
+}
+.manageBillingMethod {
+  gap: 0;
+  :global {
+    .ant-typography {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+}
+.RequestPerReviewStep {
+  max-width: 680px;
+  width: 100%;
+  margin: auto !important;
+
+  margin: 2rem 4rem;
+  text-align: left;
+  :global {
+    .ant-row {
+      align-items: flex-start;
+    }
+  }
+}
+
+.hideAsterisk {
+  .fileLabel {
+    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--grey-700, #5a5c60);
+  }
+
+  .fileLabel::after {
+    content: '*';
+    color: #dc2626;
+    margin-left: 2px;
+  }
+
+  :global {
+    .ant-form-item-required::after {
+      display: none !important;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 14px;
+  left: 7px;
+}
+
+.cursorIcon {
+  cursor: pointer;
+}

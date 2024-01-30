@@ -1,0 +1,49 @@
+.loading {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.phone {
+  position: relative;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.phoneIcon {
+  :global {
+    .react-tel-input {
+      .form-control {
+        border-radius: 12px;
+        margin-left: 50px;
+        padding-left: 10px;
+        width: calc(100% - 50px);
+      }
+      .flag-dropdown {
+        border-top-left-radius: 12px !important;
+        border-bottom-left-radius: 12px !important;
+        background: var(--white-color);
+        border-radius: 12px;
+        // overflow: auto;
+        .selected-flag {
+          border-radius: 12px;
+        }
+      }
+      input {
+        // padding-left: 15px !important;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 14px;
+  left: 7px;
+}
