@@ -8,6 +8,7 @@
     "dev": "BUILD_ENV=local next dev",
     "dev:alpha": "cross-env BUILD_ENV=alpha next dev",
     "start:alpha": "BUILD_ENV=alpha next start",
+    "start": "BUILD_ENV=alpha next start",
     "start:beta": "BUILD_ENV=beta next start",
     "start:prod": "BUILD_ENV=prod next start",
     "build:alpha": "BUILD_ENV=alpha next build",
